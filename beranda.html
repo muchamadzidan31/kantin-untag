@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <title>Beranda - Kantin UNTAG Surabaya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo-kantin.png">
+</head>
+<body>
+  <header class="navbar-kantin d-flex align-items-center">
+    <div class="desktop-container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-4">
+        <a href="beranda.html" class="d-flex align-items-center gap-2 text-decoration-none text-dark">
+          <img src="assets/icons/logo-kantin.svg" alt="Logo Kantin UNTAG" width="40" height="40">
+          <span class="fw-bold fs-5">Kantin UNTAG</span>
+        </a>
+        <nav class="d-flex align-items-center gap-2">
+          <a href="beranda.html" class="nav-link-kantin active">Beranda</a>
+          <a href="jelajah-kios.html" class="nav-link-kantin ">Jelajah Kios</a>
+          <a href="status-pesanan.html" class="nav-link-kantin ">Status Pesanan</a>
+          <a href="riwayat-pesanan.html" class="nav-link-kantin ">Riwayat</a>
+        </nav>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="keranjang.html" class="btn btn-kantin-outline position-relative ">
+          <i class="fa-solid fa-bag-shopping me-2"></i>Keranjang
+          <span class="badge rounded-pill ms-1" style="background: var(--green-900);" id="navCartCount">2</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 ps-2 border-start">
+          <div class="rounded-circle fw-bold d-flex align-items-center justify-content-center navbar-user-initials" style="width:36px;height:36px;background:var(--green-100);color:var(--green-900);">MZ</div>
+          <div class="small">
+            <div class="fw-semibold navbar-user-name">Muchamad Zidan</div>
+            <div class="text-secondary navbar-user-id" style="font-size:11px;">1462400178</div>
+          </div>
+          <a href="login.html" class="btn btn-sm btn-kantin-outline ms-2" title="Keluar"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="desktop-container py-4">
+    <section class="surface-cream-box p-5 mb-4 d-flex align-items-center justify-content-between">
+      <div style="max-width: 620px;">
+        <span class="badge-pill-green mb-3 d-inline-block">Buka Hari Ini • 07.00 – 17.00 WIB</span>
+        <h1 class="fw-bold fs-2 mb-2">Mau makan apa di Kantin UNTAG hari ini?</h1>
+        <p class="text-secondary mb-4">Pesan dari kios favoritmu sekarang, hindari antrean jam istirahat kuliah, dan ambil langsung saat matang.</p>
+        <div class="d-flex gap-2">
+          <div class="input-group" style="width: 420px;">
+            <span class="input-group-text bg-white border-end-0"><i class="fa-solid fa-magnifying-glass text-secondary"></i></span>
+            <input type="text" id="berandaSearchInput" class="form-control input-kantin border-start-0" placeholder="Cari nasi ayam geprek, soto, es teh...">
+          </div>
+          <a href="jelajah-kios.html" id="berandaSearchBtn" class="btn btn-kantin-primary">Jelajah Semua Kios</a>
+        </div>
+      </div>
+      <div class="card-kantin p-4" id="berandaActiveOrderCard" style="width: 380px;"></div>
+    </section>
+    <section class="mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3"><h2 class="fw-bold fs-5 mb-0">Kategori Menu</h2></div>
+      <div class="d-flex gap-2">
+        <button class="btn btn-kantin-primary rounded-pill px-4 beranda-kat-btn" data-kat="Semua">Semua</button>
+        <button class="btn btn-kantin-outline rounded-pill px-4 beranda-kat-btn" data-kat="Makanan Berat">Nasi &amp; Lauk</button>
+        <button class="btn btn-kantin-outline rounded-pill px-4 beranda-kat-btn" data-kat="Berkuah & Mie">Mie &amp; Bakso</button>
+        <button class="btn btn-kantin-outline rounded-pill px-4 beranda-kat-btn" data-kat="Minuman & Kopi">Minuman Segar</button>
+      </div>
+    </section>
+    <section class="mb-5">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold fs-5 mb-0">Kios Pilihan Kampus</h2>
+        <a href="jelajah-kios.html" class="text-decoration-none fw-semibold small" style="color: var(--green-900);">Lihat Semua Kios <i class="fa-solid fa-chevron-right ms-1"></i></a>
+      </div>
+      <div class="row g-4" id="berandaKiosGrid"></div>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body></html>

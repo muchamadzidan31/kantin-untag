@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <title>Keranjang - Kantin UNTAG Surabaya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo-kantin.png">
+</head>
+<body>
+  <header class="navbar-kantin d-flex align-items-center">
+    <div class="desktop-container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-4">
+        <a href="beranda.html" class="d-flex align-items-center gap-2 text-decoration-none text-dark">
+          <img src="assets/icons/logo-kantin.svg" alt="Logo Kantin UNTAG" width="40" height="40">
+          <span class="fw-bold fs-5">Kantin UNTAG</span>
+        </a>
+        <nav class="d-flex align-items-center gap-2">
+          <a href="beranda.html" class="nav-link-kantin ">Beranda</a>
+          <a href="jelajah-kios.html" class="nav-link-kantin ">Jelajah Kios</a>
+          <a href="status-pesanan.html" class="nav-link-kantin ">Status Pesanan</a>
+          <a href="riwayat-pesanan.html" class="nav-link-kantin ">Riwayat</a>
+        </nav>
+      </div>
+
+      <div class="d-flex align-items-center gap-3">
+        <a href="keranjang.html" class="btn btn-kantin-outline position-relative active">
+          <i class="fa-solid fa-bag-shopping me-2"></i>Keranjang
+          <span class="badge rounded-pill ms-1" style="background: var(--green-900);" id="navCartCount">2</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 ps-2 border-start">
+          <div class="rounded-circle fw-bold d-flex align-items-center justify-content-center" style="width:36px;height:36px;background:var(--green-100);color:var(--green-900);">MZ</div>
+          <div class="small">
+            <div class="fw-semibold">Muchamad Zidan</div>
+            <div class="text-secondary" style="font-size:11px;">1462400178</div>
+          </div>
+          <a href="login.html" class="btn btn-sm btn-kantin-outline ms-2" title="Keluar"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="desktop-container py-4">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <div>
+        <h1 class="fw-bold fs-3 mb-1">Keranjang Pesanan</h1>
+        <p class="text-secondary mb-0">Pesanan hanya dapat diproses dari satu kios dalam satu kali transaksi.</p>
+      </div>
+      <div class="d-flex align-items-center gap-2">
+        <span class="small text-secondary">Simulasi State:</span>
+        <select id="cartStateSelector" class="form-select form-select-sm input-kantin py-1" style="width: 220px;">
+          <option value="normal">06.01 - Keranjang Normal</option>
+          <option value="loading">06.02 - Keranjang Memuat</option>
+          <option value="empty">06.03 - Keranjang Kosong</option>
+          <option value="outdated">06.04 - Perlu Diperbarui</option>
+          <option value="removed">06.05 - Item Dihapus</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="cartAlertBanner" class="d-none mb-4"></div>
+
+    <div class="row g-4" id="cartMainWrapper">
+      <div class="col-8" id="cartItemsContainer"></div>
+
+      <div class="col-4" id="cartSummaryContainer">
+        <div class="card-kantin p-4">
+          <h2 class="fw-bold fs-5 mb-3">Ringkasan Pembayaran</h2>
+          <div class="d-flex justify-content-between mb-2 small">
+            <span class="text-secondary">Subtotal Menu (<span id="summaryCount">2</span> item)</span>
+            <span class="fw-semibold" id="summarySubtotal">Rp 21.000</span>
+          </div>
+          <div class="d-flex justify-content-between mb-3 small">
+            <span class="text-secondary">Biaya Layanan Aplikasi</span>
+            <span class="fw-semibold">Rp 1.000</span>
+          </div>
+          <hr class="my-3">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <span class="fw-bold">Total Bayar</span>
+            <span class="fw-bold fs-5" style="color: var(--green-900);" id="summaryTotal">Rp 22.000</span>
+          </div>
+          <a href="checkout.html" id="btnProceedCheckout" class="btn btn-kantin-primary w-100">
+            Lanjut ke Checkout <i class="fa-solid fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <title>Checkout - Kantin UNTAG Surabaya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo-kantin.png">
+</head>
+<body>
+  <header class="navbar-kantin d-flex align-items-center">
+    <div class="desktop-container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-4">
+        <a href="beranda.html" class="d-flex align-items-center gap-2 text-decoration-none text-dark">
+          <img src="assets/icons/logo-kantin.svg" alt="Logo Kantin UNTAG" width="40" height="40">
+          <span class="fw-bold fs-5">Kantin UNTAG</span>
+        </a>
+        <nav class="d-flex align-items-center gap-2">
+          <a href="beranda.html" class="nav-link-kantin ">Beranda</a>
+          <a href="jelajah-kios.html" class="nav-link-kantin ">Jelajah Kios</a>
+          <a href="status-pesanan.html" class="nav-link-kantin ">Status Pesanan</a>
+          <a href="riwayat-pesanan.html" class="nav-link-kantin ">Riwayat</a>
+        </nav>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="keranjang.html" class="btn btn-kantin-outline position-relative active">
+          <i class="fa-solid fa-bag-shopping me-2"></i>Keranjang
+          <span class="badge rounded-pill ms-1" style="background: var(--green-900);" id="navCartCount">2</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 ps-2 border-start">
+          <div class="rounded-circle fw-bold d-flex align-items-center justify-content-center navbar-user-initials" style="width:36px;height:36px;background:var(--green-100);color:var(--green-900);">MZ</div>
+          <div class="small">
+            <div class="fw-semibold navbar-user-name">Muchamad Zidan</div>
+            <div class="text-secondary navbar-user-id" style="font-size:11px;">1462400178</div>
+          </div>
+          <a href="login.html" class="btn btn-sm btn-kantin-outline ms-2" title="Keluar"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="desktop-container py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div><h1 class="fw-bold fs-3 mb-1">Konfirmasi &amp; Checkout</h1><p class="text-secondary mb-0">Lengkapi detail pengambilan pesanan sebelum melanjutkan ke pembayaran QRIS.</p></div>
+      <div class="d-flex align-items-center gap-2"><span class="small text-secondary">Simulasi State:</span><select id="checkoutStateSelector" class="form-select form-select-sm input-kantin py-1" style="width: 220px;"><option value="normal">07.01 - Checkout Normal</option><option value="invalid">07.02 - Checkout Validasi</option></select></div>
+    </div>
+    <div id="checkoutValidationBanner" class="surface-danger-box p-3 mb-4 d-none"><div class="small fw-semibold" style="color: var(--status-danger);"><i class="fa-solid fa-circle-exclamation me-2"></i>Mohon lengkapi nama pemesan dan nomor WhatsApp aktif sebelum melanjutkan pembayaran.</div></div>
+    <div class="row g-4"><div class="col-8">
+      <div class="card-kantin p-4 mb-4"><h2 class="fw-bold fs-5 mb-3">1. Informasi Pemesan</h2><div class="row g-3">
+        <div class="col-6"><label class="form-label fw-semibold small">Nama Lengkap Pemesan <span class="text-danger">*</span></label><input type="text" id="chkNama" class="form-control input-kantin" value="Muchamad Zidan Amirulloh"><div class="invalid-feedback">Nama pemesan wajib diisi.</div></div>
+        <div class="col-6"><label class="form-label fw-semibold small">Nomor WhatsApp Aktif <span class="text-danger">*</span></label><input type="text" id="chkWa" class="form-control input-kantin" value="081234567890"><div class="invalid-feedback">Nomor WhatsApp wajib diisi untuk notifikasi pesanan.</div></div>
+      </div></div>
+      <div class="card-kantin p-4 mb-4"><h2 class="fw-bold fs-5 mb-3">2. Waktu Pengambilan di Kios</h2><div class="row g-3">
+        <div class="col-6"><div class="surface-green-box p-3 border border-success"><div class="form-check"><input class="form-check-input" type="radio" name="waktuAmbil" id="ambilSekarang" checked><label class="form-check-label fw-bold" for="ambilSekarang">Ambil Sekarang (Segera Diproses)</label><div class="small text-secondary mt-1">Estimasi siap dalam ± 8 menit setelah pembayaran berhasil.</div></div></div></div>
+        <div class="col-6"><div class="card-kantin p-3"><div class="form-check"><input class="form-check-input" type="radio" name="waktuAmbil" id="ambilJadwal"><label class="form-check-label fw-bold" for="ambilJadwal">Jadwalkan Jam Istirahat</label><div class="small text-secondary mt-1">Ambil pukul 12.00 WIB di loket kios.</div></div></div></div>
+      </div></div>
+      <div class="card-kantin p-4"><h2 class="fw-bold fs-5 mb-3">3. Metode Pembayaran</h2><div class="surface-cream-box p-3 d-flex justify-content-between align-items-center"><div class="d-flex align-items-center gap-3"><div class="brand-badge"><i class="fa-solid fa-qrcode"></i></div><div><div class="fw-bold">QRIS Instan (Semua E-Wallet &amp; Mobile Banking)</div><div class="small text-secondary">GoPay, OVO, DANA, ShopeePay, BCA, Mandiri, BRI, BNI</div></div></div><span class="badge-pill-green">Otomatis Terverifikasi</span></div></div>
+    </div><div class="col-4"><div class="card-kantin p-4"><h2 class="fw-bold fs-5 mb-3">Rincian Pesanan</h2><div id="checkoutOrderItems"></div><button type="button" id="btnSubmitCheckout" class="btn btn-kantin-primary w-100">Buat Pesanan &amp; Bayar QRIS</button></div></div></div>
+  </main>
+  <script src="js/script.js"></script>
+</body></html>

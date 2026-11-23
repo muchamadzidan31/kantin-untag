@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <title>Detail Kios - Kantin UNTAG Surabaya</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="assets/images/logo-kantin.png">
+</head>
+<body>
+  <header class="navbar-kantin d-flex align-items-center">
+    <div class="desktop-container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center gap-4">
+        <a href="beranda.html" class="d-flex align-items-center gap-2 text-decoration-none text-dark">
+          <img src="assets/icons/logo-kantin.svg" alt="Logo Kantin UNTAG" width="40" height="40">
+          <span class="fw-bold fs-5">Kantin UNTAG</span>
+        </a>
+        <nav class="d-flex align-items-center gap-2">
+          <a href="beranda.html" class="nav-link-kantin ">Beranda</a>
+          <a href="jelajah-kios.html" class="nav-link-kantin active">Jelajah Kios</a>
+          <a href="status-pesanan.html" class="nav-link-kantin ">Status Pesanan</a>
+          <a href="riwayat-pesanan.html" class="nav-link-kantin ">Riwayat</a>
+        </nav>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="keranjang.html" class="btn btn-kantin-outline position-relative ">
+          <i class="fa-solid fa-bag-shopping me-2"></i>Keranjang
+          <span class="badge rounded-pill ms-1" style="background: var(--green-900);" id="navCartCount">2</span>
+        </a>
+        <div class="d-flex align-items-center gap-2 ps-2 border-start">
+          <div class="rounded-circle fw-bold d-flex align-items-center justify-content-center navbar-user-initials" style="width:36px;height:36px;background:var(--green-100);color:var(--green-900);">MZ</div>
+          <div class="small">
+            <div class="fw-semibold navbar-user-name">Muchamad Zidan</div>
+            <div class="text-secondary navbar-user-id" style="font-size:11px;">1462400178</div>
+          </div>
+          <a href="login.html" class="btn btn-sm btn-kantin-outline ms-2" title="Keluar"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="desktop-container py-4">
+    <nav class="small mb-3"><a href="beranda.html" class="text-decoration-none text-secondary">Beranda</a><span class="mx-2 text-secondary">/</span><a href="jelajah-kios.html" class="text-decoration-none text-secondary">Jelajah Kios</a><span class="mx-2 text-secondary">/</span><span class="fw-semibold" id="kiosBreadcrumbName">Warung Bu Sri</span></nav>
+    <section class="surface-cream-box p-4 mb-4 d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-4">
+        <img id="kiosHeroImg" src="assets/images/kios-1.svg" class="rounded-4 border" style="width:128px;height:128px;object-fit:cover;" alt="Foto Kios">
+        <div>
+          <div class="d-flex align-items-center gap-2 mb-2"><span id="kiosHeroBadge" class="badge-pill-green">Buka • Tutup 17.00 WIB</span><span id="kiosHeroBlok" class="badge-pill-muted">Kios Blok A-01</span></div>
+          <h1 id="kiosHeroTitle" class="fw-bold fs-3 mb-1">Warung Bu Sri — Ayam Geprek &amp; Penyetan</h1>
+          <p id="kiosHeroDesc" class="text-secondary mb-2">Spesialis ayam geprek sambal bawang dadakan, tahu tempe penyet, dan sayur asem segar.</p>
+          <div class="d-flex gap-4 small fw-semibold"><span id="kiosHeroRating"><i class="fa-solid fa-star text-warning me-1"></i>4.9 (320+ ulasan)</span><span id="kiosHeroEstimasi"><i class="fa-regular fa-clock me-1" style="color:var(--green-900);"></i>Estimasi siap 5–10 menit</span></div>
+        </div>
+      </div>
+      <div><button class="btn btn-kantin-outline" onclick="konfirmasiGantiKios()"><i class="fa-solid fa-repeat me-2"></i>Ganti Kios</button></div>
+    </section>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="fw-bold fs-5 mb-0">Daftar Menu Tersedia</h2>
+      <div class="d-flex gap-2">
+        <button class="btn btn-kantin-primary btn-sm rounded-pill px-3 kios-menu-filter" data-kat="Semua Menu">Semua Menu</button>
+        <button class="btn btn-kantin-outline btn-sm rounded-pill px-3 kios-menu-filter" data-kat="Paket Nasi">Paket Nasi</button>
+        <button class="btn btn-kantin-outline btn-sm rounded-pill px-3 kios-menu-filter" data-kat="Minuman">Minuman</button>
+      </div>
+    </div>
+    <div class="row g-4" id="kiosMenuGrid"></div>
+  </main>
+  <script src="js/script.js"></script>
+</body></html>
