@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360" viewBox="0 0 600 360" fill="none">
+  <rect width="600" height="360" fill="#FCF7F0"/>
+  <circle cx="300" cy="145" r="56" fill="#1C4132" fill-opacity="0.12"/>
+  <circle cx="300" cy="145" r="34" fill="#1C4132"/>
+  <path d="M286 145H314M300 131V159" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  <text x="300" y="238" text-anchor="middle" fill="#262322" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="22" font-weight="700">Soto Lamongan Cak Har</text>
+  <text x="300" y="268" text-anchor="middle" fill="#77716E" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15">Soto Ayam Koya & Rawon</text>
+</svg>

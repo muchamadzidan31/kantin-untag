@@ -1,0 +1,52 @@
+/* DESIGN SYSTEM — KANTIN UNTAG SURABAYA (DESKTOP 1440PX) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+  --green-900: #1C4132; --green-800: #23503E; --green-100: #EDF3EF; --green-50: #EAF4ED;
+  --surface-white: #FFFFFF; --surface-cream: #FCF7F0; --surface-muted: #F8F7F5; --surface-amber: #FFF4DF;
+  --border-light: #EAE5E1; --border-subtle: #E5E1DE;
+  --text-primary: #262322; --text-secondary: #77716E; --text-muted: #888380; --text-disabled: #BBB8B6;
+  --status-success-bg: #EAF4ED; --status-success: #1C4132; --status-warning-bg: #FFF4DF; --status-warning: #9A6700;
+  --status-danger-bg: #FDECEC; --status-danger: #B42318;
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 20px; --radius-pill: 9999px;
+  --shadow-sm: 0 1px 3px rgba(38, 35, 34, 0.05); --shadow-md: 0 4px 12px rgba(38, 35, 34, 0.06); --shadow-lg: 0 16px 40px rgba(38, 35, 34, 0.14);
+}
+* { box-sizing: border-box; }
+body { font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; background-color: var(--surface-white); color: var(--text-primary); min-width: 1280px; margin: 0; -webkit-font-smoothing: antialiased; }
+.desktop-container { width: 1280px; max-width: 1440px; margin: 0 auto; padding: 0 32px; }
+.navbar-kantin { background-color: var(--surface-white); border-bottom: 1px solid var(--border-light); height: 76px; position: sticky; top: 0; z-index: 100; }
+.brand-badge { width: 40px; height: 40px; border-radius: var(--radius-md); background-color: var(--green-900); color: #FFFFFF; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; }
+.nav-link-kantin { color: var(--text-secondary); font-weight: 500; font-size: 14px; padding: 8px 16px; border-radius: var(--radius-pill); text-decoration: none; transition: all 0.2s ease; }
+.nav-link-kantin:hover { background-color: var(--surface-muted); color: var(--text-primary); }
+.nav-link-kantin.active { background-color: var(--green-100); color: var(--green-900); font-weight: 600; }
+.btn-kantin-primary { background-color: var(--green-900); color: #FFFFFF; border: 1px solid var(--green-900); border-radius: var(--radius-md); font-weight: 600; font-size: 14px; padding: 10px 20px; transition: all 0.2s ease; }
+.btn-kantin-primary:hover { background-color: var(--green-800); border-color: var(--green-800); color: #FFFFFF; }
+.btn-kantin-primary:disabled, .btn-kantin-primary.disabled { background-color: var(--border-subtle); border-color: var(--border-subtle); color: var(--text-muted); pointer-events: none; }
+.btn-kantin-outline { background-color: var(--surface-white); color: var(--text-primary); border: 1px solid var(--border-light); border-radius: var(--radius-md); font-weight: 600; font-size: 14px; padding: 10px 20px; transition: all 0.2s ease; }
+.btn-kantin-outline:hover { background-color: var(--surface-muted); color: var(--text-primary); }
+.btn-kantin-danger { background-color: var(--status-danger); color: #FFFFFF; border: 1px solid var(--status-danger); border-radius: var(--radius-md); font-weight: 600; font-size: 14px; padding: 10px 20px; }
+.btn-kantin-danger-soft { background-color: var(--status-danger-bg); color: var(--status-danger); border: 1px solid transparent; border-radius: var(--radius-md); font-weight: 600; font-size: 14px; padding: 10px 18px; }
+.card-kantin { background-color: var(--surface-white); border: 1px solid var(--border-light); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.card-kantin.hoverable:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.surface-cream-box { background-color: var(--surface-cream); border: 1px solid var(--border-light); border-radius: var(--radius-xl); }
+.surface-green-box { background-color: var(--green-100); border-radius: var(--radius-lg); }
+.surface-amber-box { background-color: var(--surface-amber); border-radius: var(--radius-lg); }
+.surface-danger-box { background-color: var(--status-danger-bg); border-radius: var(--radius-lg); }
+.input-kantin { border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 11px 14px; font-size: 14px; color: var(--text-primary); background-color: var(--surface-white); }
+.input-kantin:focus { border-color: var(--green-900); box-shadow: 0 0 0 3px rgba(28, 65, 50, 0.12); outline: none; }
+.input-kantin.is-invalid { border-color: var(--status-danger); background-color: #FFFBFB; }
+.btn-check:checked + .btn-chip-kantin { background-color: var(--green-100); border-color: var(--green-900); color: var(--green-900); font-weight: 600; }
+.badge-pill-green { background-color: var(--green-100); color: var(--green-900); font-weight: 600; font-size: 12px; padding: 5px 12px; border-radius: var(--radius-pill); }
+.badge-pill-amber { background-color: var(--surface-amber); color: var(--status-warning); font-weight: 600; font-size: 12px; padding: 5px 12px; border-radius: var(--radius-pill); }
+.badge-pill-danger { background-color: var(--status-danger-bg); color: var(--status-danger); font-weight: 600; font-size: 12px; padding: 5px 12px; border-radius: var(--radius-pill); }
+.badge-pill-muted { background-color: var(--surface-muted); color: var(--text-secondary); font-weight: 600; font-size: 12px; padding: 5px 12px; border-radius: var(--radius-pill); }
+.stepper-item { position: relative; flex: 1; text-align: center; }
+.stepper-circle { width: 44px; height: 44px; border-radius: 50%; background-color: var(--surface-muted); border: 2px solid var(--border-light); color: var(--text-secondary); display: inline-flex; align-items: center; justify-content: center; font-weight: 700; margin-bottom: 8px; }
+.stepper-item.completed .stepper-circle, .stepper-item.active .stepper-circle { background-color: var(--green-900); border-color: var(--green-900); color: #FFFFFF; }
+.skeleton { background: linear-gradient(90deg, #F2EFEA 25%, #EAE5E1 50%, #F2EFEA 75%); background-size: 200% 100%; animation: skeleton-loading 1.4s infinite; border-radius: var(--radius-md); }
+@keyframes skeleton-loading { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+.kantin-modal-backdrop { position: fixed; inset: 0; background: rgba(38, 35, 34, 0.48); backdrop-filter: blur(3px); display: flex; align-items: center; justify-content: center; z-index: 1050; opacity: 0; visibility: hidden; transition: all 0.2s ease; }
+.kantin-modal-backdrop.show { opacity: 1; visibility: visible; }
+.kantin-modal-card { background: var(--surface-white); border: 1px solid var(--border-light); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); width: 480px; max-width: 92vw; padding: 28px; }
+.kantin-modal-icon { width: 56px; height: 56px; border-radius: var(--radius-lg); display: inline-flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
+.kantin-toast { position: fixed; bottom: 28px; right: 28px; background: var(--green-900); color: #FFFFFF; padding: 14px 20px; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 500; z-index: 1100; transform: translateY(20px); opacity: 0; pointer-events: none; transition: all 0.25s ease; }
+.kantin-toast.show { transform: translateY(0); opacity: 1; pointer-events: auto; }
